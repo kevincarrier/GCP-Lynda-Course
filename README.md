@@ -177,3 +177,10 @@ Google Cloud Tools: https://cloud.google.com/docs/overview/developer-and-admin-t
   </li>
 </ol>
 
+## Google Cloud Storage
+<i><a href="">Cloud Storage</a> is a unified object storage for developers and enterprises</i>
+<ol>
+  <li>In the Storage Section of the console select Storage</li>
+  <li>Click create bucket and set a storage class</li>
+  <li>Test with <a href="https://developers.google.com/apis-explorer/#p/storage/v1/">Cloud Storage JSON API Explorer</a></li>
+</ol>
