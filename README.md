@@ -127,4 +127,53 @@ Google Cloud Tools: https://cloud.google.com/docs/overview/developer-and-admin-t
   </li>
 </ol>
 
+## Google App Engine
+<i><a href="https://cloud.google.com/appengine/">App Engine</a> is a powerful platform to build apps and scale automatically.</i>
+<ol>
+  <li>In the Compute Section of the console select App Engine and then select your language (example Python)</li>
+  <li>Select region</li>
+  <li>Follow the App Engine Quick Start tutorial (Python)
+    <ul>
+      <li>In the gcloud console in the browser clone the <a href="https://github.com/GoogleCloudPlatform/python-docs-samples">Python GCP Repo</a> and cd into python-docs-samples/appengine/standard_python37/hello_world</li>
+      <li>Create an isolated Python environment to test
+          <pre>
+          <code>
+          virtualenv --python python3 \
+          ~/envs/hello_world
+          </pre>
+          </code>
+      </li>
+      <li>Activate the new virtual environment
+        <pre>
+        <code>
+        source \
+        ~/envs/hello_world/bin/activate
+        </code>
+        </pre>
+      </li>
+      <li> Pip install all dependencies
+        <pre>
+        <code>
+        pip install -r requirements.txt
+        </code>
+        </pre>
+      </li>
+      <li> Run app using Flask development server
+        <pre>
+        <code>
+        python main.py
+        </code>
+        </pre>
+      </li>
+      <li>Deploy App
+        <pre>
+        <code>
+        gcloud app deploy app.yaml --project \
+        gcp-lynda-course
+        </code>
+        </pre>
+      </li>
+    </ul>
+  </li>
+</ol>
 
