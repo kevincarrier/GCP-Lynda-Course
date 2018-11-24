@@ -19,5 +19,21 @@ Google Cloud Tools: https://cloud.google.com/docs/overview/developer-and-admin-t
   </li>
 </ol>
 
-  
+## Google Compute Engine
+<i><a href="https://cloud.google.com/compute/">Compute Engine</a> is a cloud-hosted virtual machine</i>
+<ol>
+  <li>In the Compute Section of the console select Compute Engine and then Create</li>
+  <li>Keep all defaults and then create</li>
+  <li>Once set up connect via SSH by selecting the Open in Browser Window in the Connect column</li>
+  <li>Setup a snapshot by selecting snapsnot and then selecting the instance.</li>
+</ol>
+<i><a href="https://cloud.google.com/marketplace/">Cloud Launcher/Marketplace</a> is a preconfigured cloud-hosted virtual machine with applications</i>
+<ol>
+  <li>Select Marketplace and then select WordPress</li>
+  <li>Select Launch on Compute Engine</li>
+  <li>Keep defaults and Deploy</li>
+  <li>Now you can view the Wordpress Public and Admin Page</li>
+</ol>
+
+
   
