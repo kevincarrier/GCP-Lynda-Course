@@ -35,5 +35,96 @@ Google Cloud Tools: https://cloud.google.com/docs/overview/developer-and-admin-t
   <li>Now you can view the Wordpress Public and Admin Page</li>
 </ol>
 
+## Google Kubernetes Container Engine
+<i><a href="https://cloud.google.com/kubernetes-engine/">Kubernetes Engine</a> is a managed, production-ready environment for deploying containerized applications.</i>
+<ol>
+  <li>In the Compute Section of the console select Kubernetes Engine and then Create</li>
+  <li>Keep all defaults and then create</li>
+  <li>Follow the Create a Guestbook with Redis and PHP tutorial
+    <ul>
+      <li>In the gcloud console in the browser clone the <a href="https://github.com/kubernetes/examples">Kubernetes Repo</a> and cd into guestbook</li>
+        <li>Setup gcloud and kubernetes credentials
+          <pre>
+          <code>
+          gcloud container clusters \
+          get-credentials <cluster-name> \
+          --zone <cluster-zone>
+          </code>
+          </pre>
+        </li>
+        <li>Deploy the master controller
+          <pre>
+          <code>
+          kubectl create -f \
+          redis-master-deployment.yaml
+          </pre>
+          </code>
+        </li>
+        <li>Verify the redis master pod is running
+          <pre>
+          <code>
+          kubectl get pods 
+          </pre>
+          </code>
+        </li>
+        <li>Create the redis master service
+          <pre>
+          <code>
+          kubectl create -f \
+          redis-master-service.yaml
+          </pre>
+          </code>
+        </li>
+        <li>Verify the service created successfully
+          <pre>
+          <code>
+          kubectl get service
+          </pre>
+          </code>
+        </li>
+        <li>Deploy a slave controller
+          <pre>
+          <code>
+          kubectl create -f \
+          redis-slave-deployment.yaml
+          </pre>
+          </code>
+        </li>
+        <li>Create the redis salve service
+          <pre>
+          <code>
+          kubectl create -f \
+          redis-slave-service.yaml
+          </pre>
+          </code>
+        </li>
+        <li>Verify the service created successfully
+          <pre>
+          <code>
+          kubectl get service
+          </pre>
+          </code>
+        </li>
+        <li>Create the guestbook frontend
+        <pre>
+          <code>
+          kubectl create -f \
+          frontend-deployment.yaml;
+          <br/>
+          sed -i -e 's/NodePort/LoadBalancer/g' \
+          frontend-service.yaml;
+          <br/>
+          kubectl create -f \
+          frontend-service.yaml;
+          </pre>
+          </code>
+        </li>
+        <li>List all fo the services and look for the front end. Wait for it to go an extranl IP and then visit the running site.
+        kubectl get services --watch
+        </li>
+      </li> 
+    </ul>
+  </li>
+</ol>
 
-  
+
