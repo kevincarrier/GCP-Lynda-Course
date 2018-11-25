@@ -173,6 +173,7 @@ Google Cloud Tools: https://cloud.google.com/docs/overview/developer-and-admin-t
         </code>
         </pre>
       </li>
+      <li>Note for multiple services add service : <service name> to app.yaml file for Python or <service>service name</service> to appengine-web.xml for Java</li> 
     </ul>
   </li>
 </ol>
