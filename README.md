@@ -298,3 +298,30 @@ Google Cloud Tools: https://cloud.google.com/docs/overview/developer-and-admin-t
   </li>
 </ol>
 
+## Google Cloud Vision API
+<i><a href="https://cloud.google.com/vision/">Cloud Vision</a> derives insight from your images with our powerful pretrained API models or easily train custom vision models with AutoML Vision.</i>
+<ol>
+  <li>In the Artifical Intelligence Section of the console select Vision</li>
+  <li>Follow the Cloud Vision Quick Start Tutorial
+    <ul>
+      <li>In the gcloud console in the browser clone the <a href="https://github.com/GoogleCloudPlatform/python-docs-samples">Python GCP Repo</a> and cd into python-docs-samples/vision/cloud-client/quickstart</li>
+      <li>Create a service account
+        <pre>
+        <code>
+        gcloud iam service-accounts create \
+        vision-quickstart --project \
+        gcp-lynda-course;
+        <br/>
+        gcloud iam service-accounts keys \
+        create key.json --iam-account \
+        vision-quickstart@gcp-lynda-course.iam.gserviceaccount.com;
+        <br/>
+        export \
+        GOOGLE_APPLICATION_CREDENTIALS=key.json;
+        </code>
+        </pre>
+      </li>
+      <li>Run with a python quickstart.py command</li>
+    </ul>
+  </li>
+</ol>
