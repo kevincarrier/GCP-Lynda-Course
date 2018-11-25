@@ -194,3 +194,9 @@ Google Cloud Tools: https://cloud.google.com/docs/overview/developer-and-admin-t
   <li>Set Instance ID and password and then create</li>
 </ol>
 
+## Google Cloud Datastore
+<i><a href="https://cloud.google.com/datastore/">Cloud Datastore</a> is a highly-scalable NoSQL database for your web and mobile applications</i>
+<ol>
+  <li>In the Storage Section of the console select Datastore</li>
+  <li>Create an entity set kind to "Task" and add 3 properties description (string), created (date), doen (boolean)</li>
+</ol>
