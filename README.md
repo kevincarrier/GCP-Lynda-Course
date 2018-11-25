@@ -207,3 +207,54 @@ Google Cloud Tools: https://cloud.google.com/docs/overview/developer-and-admin-t
   <li>In the Storage Section of the console select Bigtable</li>
   <li>Create an instance by entering the instance name, selecting the region, and keeping the rest of the defaults.</li>
 </ol>
+
+## Google BigQuery
+<i><a href="https://cloud.google.com/bigquery/">BigQuery</a> is a fast, highly scalable, cost-effective, and fully managed cloud data warehouse for analytics, with built-in machine learning.</i>
+<ol>
+  <li>In the Big Data Section of the console select BigQuery</li>
+  <li>Follow the <a href="https://cloud.google.com/bigquery/docs/quickstarts/quickstart-web-ui">Quickstart Using the BigQuery Web UI</a>
+    <ul>
+      <li>Open <a href="https://console.cloud.google.com/bigquery?p=bigquery-public-data&page=project">this url</a> and pin the bigquery-public-data</li>
+      <li>Copy the query below and then run query
+        <pre>
+        <code>
+        SELECT
+          name, gender,
+          SUM(number) AS total
+        FROM
+          `bigquery-public-data.usa_names.usa_1910_2013`
+        GROUP BY
+          name, gender
+        ORDER BY
+          total DESC
+        LIMIT
+          10
+        </code>
+        </pre>
+      </li>
+      <li>Create a new dataset and set the id to babynames</li>
+      <li>Create table and set create table from upload, select yob_2014.txt (file downloaded from quickstart), change file format to CSV, make table name names_2014, and in the schema enable edit as text and add the following and then create table
+        <pre>
+        <code>
+        name:string,gender:string,count:integer
+        </code>
+        </pre>
+      </li>
+      <li>You can preview the data in the preview tab</li>
+      <li>Run the following query
+        <pre>
+        <code>
+        SELECT
+         name, count
+        FROM
+         `babynames.names_2014`
+        WHERE
+         gender = 'M'
+        ORDER BY count DESC LIMIT 5
+        </code>
+        </pre>
+      </li>
+    </ul>
+  </li>
+</ol>
+
