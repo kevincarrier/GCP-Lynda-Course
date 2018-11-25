@@ -178,9 +178,19 @@ Google Cloud Tools: https://cloud.google.com/docs/overview/developer-and-admin-t
 </ol>
 
 ## Google Cloud Storage
-<i><a href="">Cloud Storage</a> is a unified object storage for developers and enterprises</i>
+<i><a href="https://cloud.google.com/storage/">Cloud Storage</a> is a unified object storage for developers and enterprises</i>
 <ol>
   <li>In the Storage Section of the console select Storage</li>
   <li>Click create bucket and set a storage class</li>
   <li>Test with <a href="https://developers.google.com/apis-explorer/#p/storage/v1/">Cloud Storage JSON API Explorer</a></li>
 </ol>
+
+## Google Cloud SQL
+<i><a href="https://cloud.google.com/sql/">Cloud SQL</a> is a fully-managed database service that makes it easy to set up, maintain, manage, and administer your relational PostgreSQL and MySQL databases in the cloud</i>
+<ol>
+  <li>In the Storage Section of the console select SQL</li>
+  <li>Create instance and select either MySQL or PostgreSQL</li>
+  <li>Select 2nd Generation (Recommended) or 1st Generation (Legacy)</li>
+  <li>Set Instance ID and password and then create</li>
+</ol>
+
