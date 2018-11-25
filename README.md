@@ -200,3 +200,10 @@ Google Cloud Tools: https://cloud.google.com/docs/overview/developer-and-admin-t
   <li>In the Storage Section of the console select Datastore</li>
   <li>Create an entity set kind to "Task" and add 3 properties description (string), created (date), doen (boolean)</li>
 </ol>
+
+## Google Cloud Bigtable
+<i><a href="https://cloud.google.com/bigtable/">Cloud Bigtable</a> is a petabyte-scale, fully managed NoSQL database service for large analytical and operational workloads.</i>
+<ol>
+  <li>In the Storage Section of the console select Bigtable</li>
+  <li>Create an instance by entering the instance name, selecting the region, and keeping the rest of the defaults.</li>
+</ol>
