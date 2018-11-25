@@ -258,3 +258,42 @@ Google Cloud Tools: https://cloud.google.com/docs/overview/developer-and-admin-t
   </li>
 </ol>
 
+## Pub Sub
+<i><a href="https://cloud.google.com/pubsub/docs/overview">Pub Sub</a> brings the scalability, flexibility, and reliability of enterprise message-oriented middleware to the cloud.</i>
+<ol>
+  <li>In the Big Data Section of the console select Pub Sub</li>
+  <li>Create a topic with the following gcloud command
+    <pre>
+    <code>
+    gcloud pubsub topics create my-topic
+    </code>
+    </pre>
+  </li>
+  <li>Create a subscription with the following gcloud command
+    <pre>
+    <code>
+    gcloud pubsub subscriptions \
+    create my-sub --topic my-topic \
+    --ack-deadline=60
+    </code>
+    </pre>
+  </li>
+  <li>Publish messages to the topic using the following gcloud command
+    <pre>
+    <code>
+    gcloud pubsub topics publish my-topic \
+    --message hello
+    gcloud pubsub topics publish my-topic \
+    --message goodbye
+    </code>
+    </pre>
+  </li>
+  <li>Pull messages from subscription using the following gcloud command
+    <pre>
+    <code>
+    gcloud pubsub subscriptions \
+    pull --auto-ack --limit=2 my-sub
+    </code>
+    </pre>
+  </li>
+</ol>
